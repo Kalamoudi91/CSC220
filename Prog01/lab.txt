@@ -1,0 +1,186 @@
+CSC 220 prog01
+
+   PAY ATTENTION to what you program does today and why.  Read the notes
+   "Object Oriented Programming" on the CSC220 Lecture Discussion Forum
+   this evening.  There will be questions on the quiz tomorrow.
+
+1. Accounts
+	log in
+        change password:
+               Applications->System Tools->Terminal
+	       yppasswd
+        log out and log in again
+        start Firefox (Applications->Internet->Firefox)
+        go into Blackboard for the lecture (miami.edu/blackboard)
+        discussion board (on the left)
+        CSC220 Lecture Discussion Board
+        SUBSCRIBE
+        go to the lab posting
+        go to source directory
+
+2. Create a new Java project
+	start eclipse
+		Applications->Programming->Eclipse
+		OR
+		right-click on background to start terminal
+                type eclipse and hit return
+	accept default location for workspace
+        select workbench (if it gives you a choice)
+	File->New Project->Java->Java Project
+	Next
+	project name: your login (like abcd220 or jjsm220)
+	Finish
+	Yes to Java Perspective (if it asks)
+
+3. Create a new package for this lab
+	expand ????220 (your login)
+	right click on src
+        new -> package
+        name it prog01 (NOT Prog01 NOT prog 01 NO CAPITALS OR SPACES)
+	Finish
+
+4. Create java files in this package
+	visit the source directory (on the discussion board)
+        visit Main.java
+        save into workspace/????220/src/prog01
+        do the same for Computer.java and Laptop.java
+        click on prog01 in Eclipse and press f5
+        or right-click and select REFRESH
+
+5. Fix compiler errors and run
+	open prog01
+        double-click on Main.java
+        comment out offending lines
+        press white triangle inside green circle to run
+	Go to line with runtime error by double clicking on it
+	something like (Main.java:21)
+        comment out line with run time error and try again
+
+6. Debugging
+	set a breakpoint on the first line "Set a breakpoint here..."
+	(right click to the left of line and select Toggle Breakpoint)
+        run the debugger (buggy icon next to white triangle)
+	let it switch you to debug perspective
+        single step through the program
+	use step-into (two symbols to the right of red square near top)
+        if you get a blank screen too many times, use step-return
+        if you are not calling methods in the package, use step-over
+        notice how you can see the value of variables
+        notice how you can see where you called from
+	try changing the value of a variable, like procSpeed in Computer
+	to access object variables, expand "this"
+        try setting breakpoints in methods
+
+7. Use the Visual Debugger
+    To Install:
+	Open Eclipse and go to Help->Install New Software...
+	In the "Work With" field type in:
+        	http://web.cs.miami.edu/home/jgmaster/DebugPlugin/
+	Uncheck "Group Items by Category" on this form
+	Click "next" and "accept" until it starts to install
+
+    To Use:
+	Put a breakpoint in whatever file you're going to debug
+	Go to Window->Show View->Other...
+	Expand the Debug category and select "CSC220 Debugging Visualizer"
+	The view should appear in the panel near the console view,
+        You can move this around and even move it out by just dragging the tab.
+	Start debugging the program with the bug button
+	When the program breaks on a breakpoint, 
+        the visualizer should show the current state
+        of the data structure and all other local variables. 
+	Single step (over or into) and the visualization should update.
+	Try looking at the Variables view and try to see the correspondences
+        from the textual layout of the data to the visual layout
+
+	Double click a node with a highlighted border to expand it
+	Drag the nodes in between single stepping:
+        they should remain in place during the next step.
+	Right click and click save in the context menu
+        to save an image of the figure
+
+8. Object Oriented Programming
+	notice that c2 is an instance of a Laptop
+	even though the variable is of type Computer
+
+Even if we call your laptop a computer, it's still a laptop.
+For example, I say:  ``Please install Eclipse on your computer.''
+That might refer to your laptop or your desktop.
+
+        notice that when you print out c2,
+        it calls the Laptop toString method
+	you can set a breakpoint in that toString method
+
+9. Overriding a method
+	uncomment the computePower method in Laptop.java
+	fix the first compiler error by using getRamSize()
+	fix the second error by changing processorSpeed
+	from private to protected in Computer.java
+        **notice that c2.computePower() now calls this method**
+
+10. Put Lamb.java in place and run it.  You need to right click on it
+    and run it as an application.  Ask for help if you can't get it
+    running.  It will run but print incorrect output:
+
+Mary had a little lamb 
+Mary had a little lamb 
+Mary had a little lamb 
+Mary had a little lamb 
+Mary had a little lamb 
+Mary had a little lamb 
+Final sentence should be:
+Doctor Mary only had eaten a very little lamb chop
+
+11. Implement the insert method.  Your final output should be:
+
+Mary had a little lamb 
+Mary had a very little lamb 
+Mary only had a very little lamb 
+Doctor Mary only had a very little lamb 
+Doctor Mary only had a very little lamb chop 
+Doctor Mary only had eaten a very little lamb chop 
+Final sentence should be:
+Doctor Mary only had eaten a very little lamb chop
+
+    This is a diagnostic exercise.  Feel free to ask the assistants
+    for help using the debugger, but do not ask them or your fellow
+    classmates for hints about the correct logic or why your program
+    isn't working.
+
+    Show your working program to an assistant and tell them your login
+    id (????220) if you can get it working before the end of lab period.
+
+AT HOME
+
+12. Set up a Box Sync folder at home.  The following instructions
+    assume you do not have a Box Sync folder.
+
+    Go to the UMIT Box web page:
+
+http://it.miami.edu/a-z-listing/box/index.html
+
+    There is a Box account associated with your UM email address.
+    Download the app (click on "Get it" and then your computer type).
+    Set up a local folder that is synced with Box.
+    Create a test file in your Box Sync folder.
+    Log into Box at http://box.miami.edu and verify that the file has
+    appeared there.
+
+13. Install Eclipse.  Follow the link on the home page for CSC220 and
+    install the standard version.  "DOWNLOAD 64 BIT" should work for
+    everyone, but post a reply if you are having problems.  Windows
+    users may also have to install the JDK (version 1.8).  Try the x64
+    version first.
+
+14. Run Eclipse and tell it to put the workspace folder into your Box
+    Sync folder (.../Box Sync/workspace).  Do steps 2 and 3 above.
+    You might have to exit Eclipse to do step 12.
+
+15. Log into Box in your web browser at http://box.miami.edu.  Click into
+    workspace.  Right click on your project folder (????220) and share it with
+
+    	vjm@miami.edu
+
+    using the default setting (making me an Editor).
+
+16. Do steps 4-9 above at home.
