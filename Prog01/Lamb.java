@@ -12,6 +12,17 @@ public class Lamb {
       post: Word is inserted, pushing words from index+1 to size-1 forward.
       size incremented by 1. */
   void insert (String word, int index) {
+      
+      if(size == array.length){
+          return;
+      }
+     
+      for(int i = size-1;i >= index; i--){
+          array[i+1] = array[i];
+      }
+      array[index] = word;
+      size++;
+      
   }
 
   /** Print the words in array from 0 to size-1. */
@@ -37,5 +48,6 @@ public class Lamb {
 
     System.out.println("Final sentence should be:");
     System.out.println("Doctor Mary only had eaten a very little lamb chop");
+      
   }
 }
