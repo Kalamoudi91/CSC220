@@ -1,5 +1,6 @@
 package prog01;
 
+
 /**
  * Class that represents a laptop computer.
  */
@@ -45,9 +46,9 @@ public class Laptop extends Computer {
    * Because laptops overheat easily, their power rating is half of
    * a computer's.
    */
-  /*
+  
     public double computePower() {
-      return ramSize * processorSpeed / 2;
+      return getRamSize() * processorSpeed / 2;
     }
-  */
+  
 }
