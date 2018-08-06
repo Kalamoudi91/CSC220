@@ -1,4 +1,3 @@
-
 package prog01;
 
 /**
@@ -10,7 +9,7 @@ public class Computer {
     private String processor;
     private double ramSize;
     private int diskSize;
-    private double processorSpeed;
+    protected double processorSpeed;
 
     // Methods
     /**
